@@ -1,0 +1,13 @@
+class Solution(object):
+    def minOperations(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: int
+        """
+        su=sum(nums)
+        if su % k ==0:
+            return 0
+        else:
+            s= su % k
+            return s
