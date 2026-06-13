@@ -1,0 +1,11 @@
+class Solution(object):
+    def theMaximumAchievableX(self, num, t):
+        """
+        :type num: int
+        :type t: int
+        :rtype: int
+        """
+        x=0
+        for i in range(t):
+            num=num+1
+        return num + t    
