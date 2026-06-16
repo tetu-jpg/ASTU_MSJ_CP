@@ -1,0 +1,16 @@
+class Solution(object):
+    def countDigitOccurrences(self, nums, digit):
+        """
+        :type nums: List[int]
+        :type digit: int
+        :rtype: int
+        """
+        count=0
+        dj=str(digit)
+        for i in nums:
+            k=str(i)
+            for j  in k:
+                if j==dj:
+                    count+=1
+        return count
+        
