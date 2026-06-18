@@ -1,0 +1,18 @@
+class Solution(object):
+    def searchInsert(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: int
+        """
+        d=len(nums)
+        if target in nums:
+            for i in range(d):
+                if nums[i]==target:
+                   return i
+        else:
+            nums.append(target)
+            nums.sort()
+            
+            n=nums.index(target)
+            return n
