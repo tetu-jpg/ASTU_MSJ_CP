@@ -1,0 +1,19 @@
+class Solution(object):
+    def transpose(self, matrix):
+        """
+        :type matrix: List[List[int]]
+        :rtype: List[List[int]]
+        """
+        y=[]
+        
+        rows=len(matrix[0])
+        cols=len(matrix)
+        for i in range(rows):
+            x=[]
+            for j in range(cols):
+                x.append(matrix[j][i])
+            y.append(x)
+        return y
+
+
+        
