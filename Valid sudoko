@@ -1,0 +1,48 @@
+class Solution(object):
+    def isValidSudoku(self, board):
+        """
+        :type board: List[List[str]]
+        :rtype: bool
+        """
+        
+        
+        fals=0
+        for i in range(9):
+            mat=[]
+            for j in range(9):
+                if board[i][j]!=".":
+                    if board[i][j] in mat:
+                       fals+=1
+                    else:    mat.append(board[i][j])
+            
+        
+        for i in range(9):
+            mai=[]
+            for j in range(9):
+                if board[j][i]!=".":
+                   if board[j][i] in mai:
+                      fals+=1
+                   else:
+                        mai.append(board[j][i])
+              
+        for sta in range(0,9,3):
+            for en in range(0,9,3):
+                moi=[]
+                for i in range(sta,sta+3):
+                    
+                    for j in range(en,en+3):
+                        if board[i][j]!=".":
+                           if board[i][j] in moi:
+                              fals+=1
+                           else:
+                                moi.append(board[i][j])
+                                  
+        if fals >= 1:
+           return False
+        else:
+            return True
+            
+
+            
+                
+        
