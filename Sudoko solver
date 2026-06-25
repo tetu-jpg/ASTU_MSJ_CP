@@ -1,0 +1,37 @@
+class Solution:
+    def solveSudoku(self, board: List[List[str]]) -> None:
+        def solve():
+            for i in range(9):
+                for j in range(9):
+                    if board[i][j] == ".":
+                        for ch in "123456789":
+                            ok = True
+
+                            # row
+                            for k in range(9):
+                                if board[i][k] == ch:
+                                    ok = False
+
+                            # column
+                            for k in range(9):
+                                if board[k][j] == ch:
+                                    ok = False
+
+                            # 3x3 box
+                            r = (i // 3) * 3
+                            c = (j // 3) * 3
+                            for x in range(r, r + 3):
+                                for y in range(c, c + 3):
+                                    if board[x][y] == ch:
+                                        ok = False
+
+                            if ok:
+                                board[i][j] = ch
+                                if solve():
+                                    return True
+                                board[i][j] = "."
+
+                        return False
+            return True
+
+        solve()
