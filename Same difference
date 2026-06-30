@@ -1,0 +1,14 @@
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+    s = input()
+
+    target = s[-1]
+    cur = 0
+
+    for i in range(n - 1):
+        if s[i] != target:
+            cur += 1
+
+    print(cur)
