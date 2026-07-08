@@ -1,0 +1,24 @@
+n=int(input())
+for _ in range(n):
+    k=int(input())
+    a=list(map(int,input().split()))
+    index=0
+    for i in range(k):
+        if a[index] < a[i]:
+            index = i
+    l,r=index,index
+    nex=k-1
+    while nex>0:
+        flag=False
+        if l>0 and a[l-1] ==nex:
+            l-=1
+            flag=True
+        elif r<k-1 and a[r+1] ==nex:
+            r+=1
+            flag=True
+        if flag==False:
+            print("NO")
+            break
+        nex-=1
+    else:
+        print("YES")
