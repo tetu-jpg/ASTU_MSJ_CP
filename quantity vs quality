@@ -9,7 +9,7 @@ for _ in range(n):
     if red > blue:
         flag = True
     i=2
-    j=n-2
+    j=t-2
     while i<j:
         red+=a[j]
         blue+=a[i]
