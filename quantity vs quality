@@ -1,0 +1,24 @@
+n=int(input())
+for _ in range(n):
+    t=int(input())
+    a=list(map(int,input().split()))
+    a.sort()
+    red=a[t-1]
+    blue=a[0]+a[1]
+    flag=False
+    if red > blue:
+        flag = True
+    i=2
+    j=n-2
+    while i<j:
+        red+=a[j]
+        blue+=a[i]
+        if red>blue:
+            flag=True
+            break
+        i+=1
+        j-=1
+    if flag:
+        print("YES")
+    else:
+        print("NO")
