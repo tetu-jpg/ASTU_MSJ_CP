@@ -1,0 +1,39 @@
+t=int(input())
+for _ in range(t):
+    n,k=map(int,input().split())
+    s=input()
+    total=0
+    count=0
+    flag=True
+    for ch in s:
+        if ch=="1":
+            total+=1
+            count+=1
+            if count>=k:
+                flag=False
+        else:
+            count=0
+    if not flag:
+        print("NO")
+        continue
+
+
+    one=1
+    zero=total+1
+    li=[]
+   
+    for ch in s:
+
+        if ch =="1":
+            li.append(one)
+            one+=1
+        else:
+            li.append(zero)
+            zero+=1
+    print("YES")
+    print(*li)
+
+            
+
+            
+        
