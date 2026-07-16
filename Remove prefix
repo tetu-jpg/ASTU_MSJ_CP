@@ -1,0 +1,17 @@
+t=int(input())
+for _ in range(t):
+  n=int(input())
+  a=list(map(int,input().split()))
+  unique=set()
+  ans=0
+  i=n-1
+  while i >=0:
+    if a[i] in unique:
+        ans=1+i
+        break
+        
+        
+    else:
+        unique.add(a[i])  
+        i-=1  
+  print(ans)
