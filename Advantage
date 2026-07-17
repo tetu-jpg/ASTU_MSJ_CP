@@ -1,0 +1,13 @@
+t=int(input())
+for _ in range(t):
+    n=int(input())
+    a=list(map(int,input().split()))
+    a_sort=sorted(a)
+    mx=max(a)
+    ans=[]
+    for i in range(n):
+        if mx !=a[i]:
+            ans. append(a[i]-mx)
+        else:
+            ans.append(mx-a_sort[-2])
+    print(*ans)
