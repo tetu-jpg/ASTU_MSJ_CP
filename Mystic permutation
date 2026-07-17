@@ -1,0 +1,16 @@
+t =int(input())
+for _ in range(t):
+	n=int(input())
+	a=list(map(int,input().split()))
+	temp=sorted(a)
+	for i in range(n-1):
+		if a[i]==temp[i]:
+			temp[i],temp[i+1]=temp[i+1],temp[i]
+	if a[n-1]==temp[n-1]:
+			temp[n-1],temp[n-2]=temp[n-2],temp[n-1]
+	for i in range(n):
+	    if a[i]==temp[i]:
+	    	print(-1)
+	    	break
+	else:
+	        print(*(temp))
