@@ -1,0 +1,20 @@
+recent actiot = int(input())
+
+for _ in range(t):
+    n, m = map(int, input().split())
+    actions = list(map(int, input().split()))
+
+    ans = [-1] * n
+    seen = set()
+
+    index = n - 1  # position to remove next (from the end)
+
+    for i, x in enumerate(actions, start=1):
+        if x not in seen:
+            seen.add(x)
+
+            if index >= 0:
+                ans[index] = i
+                index -= 1
+
+    print(*ans)
