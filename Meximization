@@ -1,0 +1,23 @@
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+    a = list(map(int, input().split()))
+
+    a.sort()
+
+    used = set()
+    ans = []
+
+    # Add each distinct number once
+    for x in a:
+        if x not in used:
+            ans.append(x)
+            used.add(x)
+
+    # Add duplicates
+    for x in a:
+        if ans.count(x) < a.count(x):
+            ans.append(x)
+
+    print(*ans)
