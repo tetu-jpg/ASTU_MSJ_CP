@@ -1,0 +1,18 @@
+
+t = int(input())
+for _ in range(t):
+    n = int(input())
+    s = input()
+    mismatch = 0
+    continuous = 0
+    err = 1
+    for i in range(n // 2):
+        if s[i] != s[n - 1 - i]:
+            mismatch += 1
+            continuous += err
+        elif continuous:
+            err = 0
+    if mismatch == continuous:
+        print("Yes")
+    else:
+        print("No")
