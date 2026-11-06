@@ -1,0 +1,12 @@
+n=int(input())
+for i in range(n):
+    a,b=map(int,input().split())
+    count=0
+    if a%b ==0:
+        count=0
+    else:
+        out=b-(a%b)
+        count+=out
+
+    print(count)
+    
