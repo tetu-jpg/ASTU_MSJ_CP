@@ -1,0 +1,9 @@
+n=int(input())
+c=n//2
+b=c-1
+if n%2 ==0:
+    out= "I hate that I love that " * b + "I hate that I love it"
+    print(out)
+else:
+    out="I hate that I love that " * c + "I hate it"
+    print(out)
