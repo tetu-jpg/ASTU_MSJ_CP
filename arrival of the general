@@ -1,0 +1,17 @@
+n=int(input())
+count=0
+a=list(map(int,input().split()))
+c = n - 1 - a[::-1].index(min(a))
+d=a.index(max(a))
+
+if a[0]==max(a) and a[n-1]==min(a):
+    count=0
+else:
+    count+=d
+    count+=n-1-c
+if d > c:
+    count-=1
+print(count)
+        
+        #count+=index(max)
+        #count+=n-index(min)-1
