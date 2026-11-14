@@ -1,0 +1,11 @@
+a=input()
+b=a[1:-1]
+c=b.split(", ")
+d=set(c)
+count=0
+if len(b)==0:
+    count=0
+else:
+    count=len(d)
+
+print(count)
