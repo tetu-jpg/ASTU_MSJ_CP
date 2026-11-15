@@ -1,0 +1,6 @@
+n,m,a=map(int,input().split())
+theatre=(n+a-1)//a
+square=(m+a-1)//a
+output=theatre * square
+print(output)
+
