@@ -1,0 +1,15 @@
+lists=[]
+output=set()
+for i in range(5):
+    n=int(input())
+    lists.append(n)
+m=len(lists)
+for i in range(m-1):
+    for j in range(1,lists[m-1]+1):
+        out=lists[i]*j
+
+        if out<=lists[m-1]:
+            output.add(out)
+
+print(len(output))
+
