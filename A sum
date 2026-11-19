@@ -2,12 +2,9 @@ n=int(input())
 
 for _ in range(n):
     flag=False
-    a=list(map(int,input().split()))
-    for i in range(len(a)):
-        for j in range(len(a)):
-            if i!=j:
-                if a[i]+a[j] in a:
-                    flag=True
+    a,b,c=map(int,input().split())
+    if a+b==c or a+c==b or b+c==a:
+        flag=True
     if flag:
         print("YES")
     else:
