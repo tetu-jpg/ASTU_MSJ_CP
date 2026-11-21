@@ -1,0 +1,19 @@
+a,b=map(int,input().split())
+
+for i in range(1,a+1):
+    pattern=""
+    for j in range(b):
+        if i %2 !=0:
+            pattern+="#"
+        elif i%4==0:
+            if j==0:
+                pattern+="#"
+            else:
+                pattern+="."
+        else:
+            if j<b-1:
+                pattern+="."
+            else:
+                pattern+="#"
+
+    print(pattern)        
