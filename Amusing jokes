@@ -1,0 +1,12 @@
+guest = input()
+host = input()
+final = input()
+s = guest.upper()
+t = host.upper()
+u = final.upper()
+combined = sorted(s + t)
+u = sorted(u)
+if combined != u:
+    print("NO")
+else:
+    print("YES")
